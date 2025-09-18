@@ -28,3 +28,8 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
 // A Guard in NestJS is a special type of class that determines whether a given request should be handled by a route handler.They are executed before any interceptor, pipe, or controller.Guards are responsible for authorization and access control, acting as a gatekeeper to protect routes based on specific conditions.
 
 // Think of a Guard as an "access control middleware" that checks if a user has the necessary permissions(e.g., is authenticated, has a certain role) to access a resource. .
+
+// AuthGuard
+// Purpose: You apply it to a route to enforce authentication.For instance, @UseGuards(AuthGuard('jwt')) tells NestJS to run the jwt strategy(the one you defined with PassportStrategy) before allowing the request to hit the controller.
+
+// How it works: It acts as a gatekeeper.If the authentication strategy succeeds, the guard returns true, and the request proceeds.If it fails(e.g., an invalid token), the guard throws an authentication error.

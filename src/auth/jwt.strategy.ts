@@ -30,3 +30,7 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
     };
   }
 }
+
+// This code defines a JWT Strategy for NestJS.Its purpose is to handle the logic for validating a JWT(JSON Web Token) from an incoming request. .It's a key component of the NestJS authentication flow, working in conjunction with @nestjs/passport and a JwtAuthGuard.
+
+// PassportStrategy(Strategy, 'jwt'): This extends PassportStrategy and sets its name to 'jwt'.This name is used by the AuthGuard('jwt') to find and apply this specific strategy.
