@@ -21,3 +21,10 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
     return super.canActivate(context);
   }
 }
+
+// it's a custom NestJS guard that extends the built -in AuthGuard('jwt').It is designed to allow certain routes to be publicly accessible, bypassing JWT authentication.
+
+// Guard
+// A Guard in NestJS is a special type of class that determines whether a given request should be handled by a route handler.They are executed before any interceptor, pipe, or controller.Guards are responsible for authorization and access control, acting as a gatekeeper to protect routes based on specific conditions.
+
+// Think of a Guard as an "access control middleware" that checks if a user has the necessary permissions(e.g., is authenticated, has a certain role) to access a resource. .
