@@ -5,21 +5,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+
 
 ## Description
 
@@ -55,5 +41,72 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+
+## @nestjs/common 📦
+
+This package contains the most commonly used, fundamental building blocks for creating a NestJS application. You'll import from here for almost every component you create.
+
+```bash
+
+  # Decorators:
+
+  @Module(): Defines a NestJS module.
+
+  @Injectable(): Marks a class as a provider that can be managed by the NestJS IoC container.
+
+  @Controller(): Defines a class as a controller, handling incoming requests.
+
+  @Get(), @Post(), @Put(), @Delete(), etc.: Route-handling decorators for HTTP requests.
+
+  @Inject(): Manually injects a provider.
+
+  # Interfaces:
+
+  OnModuleInit, OnModuleDestroy, OnApplicationBootstrap: Lifecycle hooks for modules and applications.
+
+  CanActivate: Used for creating a Guard.
+
+  NestInterceptor: Used for creating an Interceptor.
+
+  PipeTransform: Used for creating a Pipe.
+
+
+  # Exceptions and Utilities:
+
+  HttpException: A base class for custom HTTP-based exceptions.
+
+  HttpStatus: An enum for standard HTTP status codes.
+
+
+```
+
+## @nestjs/core 🧠
+
+This package contains the core runtime and bootstrapping functionalities. You will use it less frequently in your day-to-day coding, but it is essential for the application's structure and advanced features.
+
+
+```bash
+
+   # Core Classes:
+
+   NestFactory: The main class for creating an application instance. You use its create() method to bootstrap the application in main.ts.
+
+   NestApplication: The class returned by NestFactory.create(), representing the running application.
+
+   Reflector: A service for reading metadata attached to classes and methods (e.g., from custom decorators). It's crucial for implementing Guards and Interceptors.
+
+
+   # Pipes & Guards:
+
+
+   APP_PIPE & APP_GUARD: Tokens used to register global pipes and guards.
+
+
+   # Exceptions and Error Handling:
+
+   HttpExceptionFilter: A base class for creating custom exception filters.
+
+
 ```
 
