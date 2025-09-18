@@ -1,8 +1,4 @@
-import {
-  BadRequestException,
-  Injectable,
-  UnauthorizedException,
-} from '@nestjs/common';
+import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { RegisterDto } from './dto/register.dto';
 // import { RegisterDto } from '../templates/welcome.html';
@@ -19,7 +15,7 @@ export class AuthService {
     private prisma: PrismaService,
     private jwtService: JwtService,
     private mailerSevice: MailerService, // Inject the MailerService
-  ) { }
+  ) {}
 
   async register(registerDto: RegisterDto) {
     const { email, password, name } = registerDto;
