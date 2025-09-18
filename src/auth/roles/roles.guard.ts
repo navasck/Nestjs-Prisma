@@ -16,3 +16,5 @@ export class RolesGuard implements CanActivate {
     return requiredRoles.includes(user.role);
   }
 }
+
+// This NestJS code defines a RolesGuard, which is a crucial component for implementing role - based access control(RBAC).It works as a gatekeeper to protect your application routes, ensuring that only users with specific roles can access certain resources.

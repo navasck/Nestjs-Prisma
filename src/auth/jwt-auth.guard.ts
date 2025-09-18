@@ -33,3 +33,5 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
 // Purpose: You apply it to a route to enforce authentication.For instance, @UseGuards(AuthGuard('jwt')) tells NestJS to run the jwt strategy(the one you defined with PassportStrategy) before allowing the request to hit the controller.
 
 // How it works: It acts as a gatekeeper.If the authentication strategy succeeds, the guard returns true, and the request proceeds.If it fails(e.g., an invalid token), the guard throws an authentication error.
+
+// Reflector is a NestJS service that allows you to read metadata that has been set by decorators.It's a crucial tool for creating dynamic and declarative logic in your application.
