@@ -6,6 +6,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './auth/auth.module';
 import { CommonModule } from './common/common.module';
 import { AdminModule } from './admin/admin.module';
+import { TeamsModule } from './teams/teams.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -16,6 +17,7 @@ import { AdminModule } from './admin/admin.module';
     AuthModule,
     AdminModule,
     CommonModule,
+    TeamsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

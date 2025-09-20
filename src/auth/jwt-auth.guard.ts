@@ -35,3 +35,5 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
 // How it works: It acts as a gatekeeper.If the authentication strategy succeeds, the guard returns true, and the request proceeds.If it fails(e.g., an invalid token), the guard throws an authentication error.
 
 // Reflector is a NestJS service that allows you to read metadata that has been set by decorators.It's a crucial tool for creating dynamic and declarative logic in your application.
+
+// The JwtAuthGuard and JwtStrategy are connected through the @nestjs/passport library. You won't see a direct import because their connection is managed by the framework's dependency injection and the AuthGuard abstraction.
