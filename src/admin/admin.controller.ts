@@ -17,3 +17,6 @@ export class AdminController {
     };
   }
 }
+
+// @UseGuards
+// Decorator that binds guards to the scope of the controller or method, depending on its context.
